@@ -23,7 +23,7 @@ label {
 }
 
 /* Style the submit button */
-input[type=buton] {
+input[type=button] {
   background-color: #4CAF50;
   color: white;
   padding: 12px 20px;
