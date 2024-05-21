@@ -18,6 +18,7 @@ btn1.addEventListener("click", function(){
 		
 		item = "1000";
 		tg.sendData(item);
+		tg.close()
 	});
 
 btn2.addEventListener("click", function(){
