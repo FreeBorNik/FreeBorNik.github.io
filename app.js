@@ -15,6 +15,7 @@ let btn5 = document.getElementById("btn5");
 let btn6 = document.getElementById("btn6");
 
 btn1.onclick = function({
+	        alert("Вы нажали на кнопку"); 
 		item = "1000";
 		tg.sendData(item);
 		tg.close()}
