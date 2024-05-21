@@ -14,12 +14,11 @@ let btn4 = document.getElementById("btn4");
 let btn5 = document.getElementById("btn5");
 let btn6 = document.getElementById("btn6");
 
-btn1.addEventListener("click", function(){
-		
+btn1.onclick = function({
 		item = "1000";
 		tg.sendData(item);
-		tg.close()
-	});
+		tg.close()}
+	);
 
 btn2.addEventListener("click", function(){
 	if (tg.MainButton.isVisible) {
