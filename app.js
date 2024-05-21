@@ -17,7 +17,7 @@ let btn6 = document.getElementById("btn6");
 btn1.addEventListener("click", function(){
 		
 		item = "1000";
-	
+		tg.sendData(item);
 	});
 
 btn2.addEventListener("click", function(){
