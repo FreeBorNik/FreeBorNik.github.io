@@ -4,6 +4,7 @@ tg.expand();
 
 tg.MainButton.textColor = '#FFFFFF';
 tg.MainButton.color = '#2cab37';
+tg.MainButton.enable()
 
 let item = "";
 
@@ -19,7 +20,7 @@ btn1.addEventListener("click", function(){
 		tg.MainButton.hide();
 	}
 	else {
-		tg.MainButton.setText("Получаем данные);
+		tg.MainButton.setText("Получить данные);
 		item = "1";
 		tg.MainButton.show();
 	}
