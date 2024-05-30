@@ -7,14 +7,52 @@
 	<title>Document</title>
 </head>
 <body>
-   <div id="usercard"> <!--Карта профиля, человека, который к нам обратился-->
-   </div>
-   <p>Just text</p> <!--Просто текст для проверки-->
-   <a class="link" href="https://mihailgok.ru">Link</a> <!--Просто ссылка для проверки-->
-   <p class="hint">Some little hint</p> <!--Просто текст-подсказка для проверки-->
-   <button id="btn" class="button">Show/Hide Main Button</button> <!--Кнопка, чтобы скрыть / показать основную кнопку-->
-   <button id="btnED" class="button">Enable/Disable Main Button</button> <!--Кнопка, чтобы сделать кнопку активной/неактивной-->
-   <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    <div class="container">
+<!--    <form action="action_page.php">-->
+    <div class="row">
+      <div class="col-25">
+        <label for="fname">Ваша фамилия</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="fname" name="firstname" placeholder="Ваша фамилия">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-25">
+        <label for="lname">Ваше имя</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="lname" name="lastname" placeholder="Ваше имя...">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-25">
+        <label for="country">Откуда Вы?</label>
+      </div>
+      <div class="col-75">
+        <select id="country" name="country">
+          <option value="ru">🇷🇺 Россия</option>
+          <option value="by">🇧🇾 Беларусь</option>
+          <option value="kz">🇰🇿 Казахстан</option>
+	  <option value="eu">🇪🇺 Евросоюз</option>
+        </select>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-25">
+        <label for="subject">Subject</label>
+      </div>
+      <div class="col-75">
+        <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+      </div>
+    </div>
+    <div class="row">
+        <button class="button" id=btn_close >Сохранить</button>
+    </div>
+<!--  </form>-->
+</div>
+
+	<script src="https://telegram.org/js/telegram-web-app.js"></script>
 	<script src="app.js"></script>
 </body>
 </html>
