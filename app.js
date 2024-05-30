@@ -21,5 +21,5 @@ btn_close.addEventListener('click', function(){ //вешаем событие н
 
 Telegram.WebApp.onEvent('mainButtonClicked', function(){
 	tg.sendData("some string that we need to send"); 
-	//при клике на основную кнопку отправляем данные в строковом виде
+	// при клике на основную кнопку отправляем данные в строковом виде
 });
