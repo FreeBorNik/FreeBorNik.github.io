@@ -14,7 +14,7 @@ tg.MainButton.setParams({"color": "#143F6B"}); //так изменяются в�
 
 btn_close.addEventListener('click', function(){ //вешаем событие на нажатие html-кнопки
 	if (trim(document.getElementById('fname').value) !== '') {
-		answer_message = "ФИО:"+'что то есть'
+		answer_message = "ФИО:"+'что то есть 2'
 			// document.getElementById('fname').value; 
 		} else {
     let err = document.createElement('p')
