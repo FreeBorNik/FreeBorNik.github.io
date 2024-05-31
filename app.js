@@ -20,6 +20,12 @@ elem_fio = document.getElementById('fname')
 elem_email = document.getElementById('email')
 elem_subject = document.getElementById('subject')
 
+BackButton.onClick(function() {
+    WebApp.showAlert("Ок. Попробуйте в следующий раз");
+    BackButton.hide();
+    tg.close();
+});
+
 
 btn_close.addEventListener('click', function(){ //вешаем событие на нажатие html-кнопки
 	flag = true;
