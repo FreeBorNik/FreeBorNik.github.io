@@ -17,6 +17,7 @@ btn_close.addEventListener('click', function(){ //вешаем событие н
 		answer_message = "ФИО:"+'что то есть 22'
 			// document.getElementById('fname').value; 
 		} else {
+	document.getElementById('fname').value = 'Заполните это поле';		
     let err = document.createElement('p')
     err.innerHTML = '[ТЕКСТ ОШИБКИ]'
 		answer_message = "Ошибка"
