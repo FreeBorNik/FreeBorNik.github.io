@@ -25,7 +25,7 @@ btn_close.addEventListener('click', function(){ //вешаем событие н
 	answer_message = answer_message+'\n'+'Страна:'+document.getElementById('country').value; 
 	answer_message = answer_message+'\n'+'Навыки:'+document.getElementById('subject').value;
 	answer_message = 'Ваши данные:\n'+answer_message;
-	if flag {
+	if (flag) {
 	tg.sendData(answer_message); }
 });
 
