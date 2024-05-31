@@ -20,7 +20,7 @@ btn_close.addEventListener('click', function(){ //вешаем событие н
     let err = document.createElement('p')
     err.innerHTML = '[ТЕКСТ ОШИБКИ]'
 		answer_message = "Ошибка"
-		tg.sendData(answer_message); 
+		// tg.sendData(answer_message); 
     errors.appendChild(err)
   }
 	answer_message = answer_message+'\n'+'e-mail:'+document.getElementById('email').value; 
