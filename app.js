@@ -12,20 +12,49 @@ tg.MainButton.color = "#143F6B"; //изменяем цвет бэкграунд�
 tg.MainButton.setParams({"color": "#143F6B"}); //так изменяются все параметры 
 // tg.MainButton.show()
 
+elem_fio = document.getElementById('fname')
+elem_email = document.getElementById('email')
+elem_subject = document.getElementById('subject')
+
 
 btn_close.addEventListener('click', function(){ //вешаем событие на нажатие html-кнопки
-	if (document.getElementById('fname').value != "") {
-		answer_message = "ФИО:"+'что то есть 22'
-			// document.getElementById('fname').value; 
+    if (elem_fio.value.trim() !== "") {
+		answer_message = elem_fio.value.trim(); 
+	
 		} else {
-		document.getElementById('fname').value = 'Заполните это поле';
+      Object.assign(elem_fio.style, {
+                    borderColor: 'red',
+                    padding: '12px'
+                    });
+      		  elem_fio.placeholder = 'Укажите свои ФИО';
 		flag = false;
     }
-	answer_message = answer_message+'\n'+'e-mail:'+document.getElementById('email').value; 
+    if (elem_email.value.trim() !== "") {
+		answer_message = elem_email.value.trim(); 
+	
+		} else {
+      Object.assign(elem_email.style, {
+                    borderColor: 'red',
+                    padding: '12px'
+                    });
+      		  elem_email.placeholder = 'Укажите свой e-mail';
+		flag = false;
+    }
+    if (elem_subject.value.trim() !== "") {
+		answer_message = elem_subject.value.trim(); 
+	
+		} else {
+      Object.assign(elem_subject.style, {
+                    borderColor: 'red',
+                    padding: '12px'
+                    });
+      		  elem_subject.placeholder = 'Укажите хотя бы один навык';
+		flag = false;
+    }    
+//	answer_message = answer_message+'\n'+'e-mail:'+document.getElementById('email').value; 
 	answer_message = answer_message+'\n'+'Страна:'+document.getElementById('country').value; 
-	answer_message = answer_message+'\n'+'Навыки:'+document.getElementById('subject').value;
+//	answer_message = answer_message+'\n'+'Навыки:'+document.getElementById('subject').value;
 	answer_message = 'Ваши данные:\n'+answer_message;
 	if (flag) {
 	tg.sendData(answer_message); }
 });
-
