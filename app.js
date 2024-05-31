@@ -1,4 +1,5 @@
 let tg = window.Telegram.WebApp; //получаем объект webapp телеграма 
+let answer_message = ""
 
 tg.expand(); //расширяем на все окно  
 
@@ -15,11 +16,12 @@ btn_close.addEventListener('click', function(){ //вешаем событие н
 		tg.MainButton.hide() //скрываем кнопку 
 	}
   else{ //иначе
+	answer_message = 'Нажали кнопку "Подтвердить"'  
   	tg.MainButton.show() //показываем 
   }
 });
 
 Telegram.WebApp.onEvent('mainButtonClicked', function(){
-	tg.sendData("some string that we need to send"); 
+	tg.sendData(answer_message); 
 	// при клике на основную кнопку отправляем данные в строковом виде
 });
