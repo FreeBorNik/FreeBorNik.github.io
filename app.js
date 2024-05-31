@@ -14,7 +14,7 @@ tg.MainButton.setParams({"color": "#143F6B"}); //так изменяются в�
 btn_close.addEventListener('click', function(){ //вешаем событие на нажатие html-кнопки
 	answer_message = "Ваши данные:\n"
 	answer_message = answer_message+document.getElementById('fname').value; 
-	answer_message = answer_message+'\n'+document.getElementById('fname').value; 
+	answer_message = answer_message+'\n'+document.getElementById('country').value; 
 	tg.sendData(answer_message); 
 	// if (tg.MainButton.isVisible){ //если кнопка показана 
 	// 	tg.MainButton.hide() //скрываем кнопку 
