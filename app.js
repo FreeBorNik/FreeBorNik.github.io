@@ -1,5 +1,6 @@
 let tg = window.Telegram.WebApp; //получаем объект webapp телеграма 
 let answer_message = ""
+let errors = document.getElementsByClassName('help-block with-errors')
 
 tg.expand(); //расширяем на все окно  
 
@@ -12,8 +13,13 @@ tg.MainButton.setParams({"color": "#143F6B"}); //так изменяются в�
 
 
 btn_close.addEventListener('click', function(){ //вешаем событие на нажатие html-кнопки
-	
-	answer_message = "ФИО:"+document.getElementById('fname').value; 
+	if (document.getElementById('fname').value !== null) {
+		answer_message = "ФИО:"+document.getElementById('fname').value; 
+		} else {
+    let err = document.createElement('p')
+    err.innerHTML = '[ТЕКСТ ОШИБКИ]'
+    errors.appendChild(err)
+  }
 	answer_message = answer_message+'\n'+'e-mail:'+document.getElementById('email').value; 
 	answer_message = answer_message+'\n'+'Страна:'+document.getElementById('country'); 
 	answer_message = answer_message+'\n'+'Навыки:'+document.getElementById('subject').value;
