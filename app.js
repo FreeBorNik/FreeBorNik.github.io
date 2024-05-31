@@ -1,5 +1,6 @@
 let tg = window.Telegram.WebApp; //получаем объект webapp телеграма 
 let answer_message = ""
+let flag = true;
 let errors = document.getElementsByClassName('help-block with-errors')
 
 tg.expand(); //расширяем на все окно  
@@ -17,12 +18,14 @@ btn_close.addEventListener('click', function(){ //вешаем событие н
 		answer_message = "ФИО:"+'что то есть 22'
 			// document.getElementById('fname').value; 
 		} else {
-	document.getElementById('fname').value = 'Заполните это поле';		
+		document.getElementById('fname').value = 'Заполните это поле';
+		flag = false;
     }
 	answer_message = answer_message+'\n'+'e-mail:'+document.getElementById('email').value; 
 	answer_message = answer_message+'\n'+'Страна:'+document.getElementById('country').value; 
 	answer_message = answer_message+'\n'+'Навыки:'+document.getElementById('subject').value;
 	answer_message = 'Ваши данные:\n'+answer_message;
-	tg.sendData(answer_message); 
+	if flag {
+	tg.sendData(answer_message); }
 });
 
