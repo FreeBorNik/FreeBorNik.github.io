@@ -12,11 +12,13 @@ tg.MainButton.show()
 
 
 btn_close.addEventListener('click', function(){ //вешаем событие на нажатие html-кнопки
+	answer_message = 'Ваша ФИО'+document.getElementById('fname').value; 
+	tg.sendData(answer_message); 
 	if (tg.MainButton.isVisible){ //если кнопка показана 
 		tg.MainButton.hide() //скрываем кнопку 
 	}
   else{ //иначе
-	answer_message = 'Нажали кнопку "Подтвердить"'  
+	answer_message = 'Ваша ФИО'+document.getElementById('fname').value; 
   	tg.MainButton.show() //показываем 
   }
 });
