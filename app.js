@@ -8,22 +8,23 @@ tg.MainButton.setText("Отправить данные"); //изменяем т�
 tg.MainButton.textColor = "#F55353"; //изменяем цвет текста кнопки
 tg.MainButton.color = "#143F6B"; //изменяем цвет бэкграунда кнопки
 tg.MainButton.setParams({"color": "#143F6B"}); //так изменяются все параметры 
-tg.MainButton.show()
+// tg.MainButton.show()
 
 
 btn_close.addEventListener('click', function(){ //вешаем событие на нажатие html-кнопки
-	answer_message = 'Ваша ФИО'+document.getElementById('fname').value; 
+	answer_message = "ОГО "
+	answer_message = answer_message+document.getElementById('fname').value; 
 	tg.sendData(answer_message); 
-	if (tg.MainButton.isVisible){ //если кнопка показана 
-		tg.MainButton.hide() //скрываем кнопку 
-	}
-  else{ //иначе
-	answer_message = 'Ваша ФИО'+document.getElementById('fname').value; 
-  	tg.MainButton.show() //показываем 
-  }
+	// if (tg.MainButton.isVisible){ //если кнопка показана 
+	// 	tg.MainButton.hide() //скрываем кнопку 
+	// }
+ //  else{ //иначе
+	// answer_message = 'Ваша ФИО'+document.getElementById('fname').value; 
+ //  	tg.MainButton.show() //показываем 
+ //  }
 });
 
-Telegram.WebApp.onEvent('mainButtonClicked', function(){
-	tg.sendData(answer_message); 
-	// при клике на основную кнопку отправляем данные в строковом виде
-});
+// Telegram.WebApp.onEvent('mainButtonClicked', function(){
+// 	tg.sendData(answer_message); 
+// 	// при клике на основную кнопку отправляем данные в строковом виде
+// });
