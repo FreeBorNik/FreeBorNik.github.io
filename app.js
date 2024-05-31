@@ -1,5 +1,8 @@
 let tg = window.Telegram.WebApp; //получаем объект webapp телеграма 
 let answer_message = ""
+let msg_fio = ""
+let msg_email = ""
+let msg_subject = ""
 let flag = true;
 let errors = document.getElementsByClassName('help-block with-errors')
 
@@ -20,7 +23,7 @@ elem_subject = document.getElementById('subject')
 btn_close.addEventListener('click', function(){ //вешаем событие на нажатие html-кнопки
 	flag = true;
     if (elem_fio.value.trim() !== "") {
-		answer_message = elem_fio.value.trim(); 
+		msg_fio = elem_fio.value.trim(); 
 		Object.assign(elem_fio.style, {
                     borderColor: 'green',
                     padding: '12px'
@@ -34,7 +37,7 @@ btn_close.addEventListener('click', function(){ //вешаем событие н
 		flag = false;
     }
     if (elem_email.value.trim() !== "") {
-		answer_message = elem_email.value.trim(); 
+		msg_email = elem_email.value.trim(); 
 	    	Object.assign(elem_email.style, {
                     borderColor: 'green',
                     padding: '12px'
@@ -48,7 +51,7 @@ btn_close.addEventListener('click', function(){ //вешаем событие н
 		flag = false;
     }
     if (elem_subject.value.trim() !== "") {
-		answer_message = elem_subject.value.trim(); 
+		msg_subject = elem_subject.value.trim(); 
 		Object.assign(elem_subject.style, {
                     borderColor: 'green',
                     padding: '12px'
@@ -61,8 +64,9 @@ btn_close.addEventListener('click', function(){ //вешаем событие н
       		  elem_subject.placeholder = 'Укажите хотя бы один навык';
 		flag = false;
     }    
-	answer_message = answer_message+'\n'+'Страна:'+document.getElementById('country').value; 
-	answer_message = 'Ваши данные:\n'+answer_message;
+	
+	answer_message = msg_fio+':'+msg_email+':'+ document.getElementById('country').value +':'+msg_subject; 
+	// answer_message = 'Ваши данные:\n'+answer_message;
 	if (flag) {
 	tg.sendData(answer_message); }
 });
