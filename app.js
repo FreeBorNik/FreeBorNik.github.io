@@ -14,6 +14,7 @@ tg.MainButton.textColor = "#F55353"; //изменяем цвет текста к
 tg.MainButton.color = "#143F6B"; //изменяем цвет бэкграунда кнопки
 tg.MainButton.setParams({"color": "#143F6B"}); //так изменяются все параметры 
 // tg.MainButton.show()
+tg.BackButton.show();
 
 elem_fio = document.getElementById('fname')
 elem_email = document.getElementById('email')
