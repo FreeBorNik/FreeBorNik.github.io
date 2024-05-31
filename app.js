@@ -14,9 +14,9 @@ tg.MainButton.setParams({"color": "#143F6B"}); //так изменяются в�
 btn_close.addEventListener('click', function(){ //вешаем событие на нажатие html-кнопки
 	
 	answer_message = "ФИО:"+document.getElementById('fname').value; 
-	// answer_message = answer_message+'\n'+'e-mail:'document.getElementById('email').value; 
-	// answer_message = answer_message+'\n'+'Страна:'document.getElementById('country').value; 
-	// answer_message = answer_message+'\n'+'Страна:'document.getElementById('subject').value;
+	answer_message = answer_message+'\n'+'e-mail:'document.getElementById('email').value; 
+	answer_message = answer_message+'\n'+'Страна:'document.getElementById('country').value; 
+	answer_message = answer_message+'\n'+'Страна:'document.getElementById('subject').value;
 	answer_message = 'Ваши данные:\n'+answer_message;
 	tg.sendData(answer_message); 
 });
