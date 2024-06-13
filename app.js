@@ -31,7 +31,7 @@ tg.BackButton.onClick(function() {
 
 
 btn_close.addEventListener('click', function(){ //вешаем событие на нажатие html-кнопки
-	tg.showAlert(tg.initDataUnsafe);
+	tg.showAlert(tg.WebAppUser);
         elem_fio.value = tg.initDataUnsafe.first_name
 	flag = true;
     if (elem_fio.value.trim() !== "") {
