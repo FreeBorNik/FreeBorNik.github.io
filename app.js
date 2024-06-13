@@ -22,7 +22,7 @@ elem_fio = document.getElementById('fname')
 elem_email = document.getElementById('email')
 elem_subject = document.getElementById('subject')
 
-elem_fio.value = 'Хм2'
+elem_fio.value = 'Хм3'
 tg.BackButton.onClick(function() {
     WebApp.showAlert("Ок. Попробуйте в следующий раз");
     BackButton.hide();
@@ -31,7 +31,7 @@ tg.BackButton.onClick(function() {
 
 
 btn_close.addEventListener('click', function(){ //вешаем событие на нажатие html-кнопки
-	tg.showAlert(tg.WebAppUser);
+	tg.showAlert(tg.WebAppUser.username);
         elem_fio.value = tg.initDataUnsafe.first_name
 	flag = true;
     if (elem_fio.value.trim() !== "") {
