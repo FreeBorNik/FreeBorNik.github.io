@@ -29,8 +29,6 @@ tg.BackButton.onClick(function() {
 
 
 btn_close.addEventListener('click', function(){ //вешаем событие на нажатие html-кнопки
-	tg.showAlert("Не беспокойтесь. Мы сохраним ваш выбор.");
-	tg.showAlert("Jr");
 	tg.showAlert(tg.initDataUnsafe);
         elem_fio.value = tg.initDataUnsafe.first_name
 	flag = true;
