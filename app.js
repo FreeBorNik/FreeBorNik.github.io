@@ -16,11 +16,13 @@ tg.MainButton.setParams({"color": "#143F6B"}); //так изменяются в�
 // tg.MainButton.show()
 tg.BackButton.show();
 
+
+
 elem_fio = document.getElementById('fname')
 elem_email = document.getElementById('email')
 elem_subject = document.getElementById('subject')
 
-
+elem_fio.value = 'Хм'
 tg.BackButton.onClick(function() {
     WebApp.showAlert("Ок. Попробуйте в следующий раз");
     BackButton.hide();
