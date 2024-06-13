@@ -19,9 +19,8 @@ tg.BackButton.show();
 elem_fio = document.getElementById('fname')
 elem_email = document.getElementById('email')
 elem_subject = document.getElementById('subject')
-tg.showAlert("Не беспокойтесь. Мы сохраним ваш выбор.");
-tg.showAlert(tg.initDataUnsafe);
-elem_fio.value = tg.initDataUnsafe.first_name
+
+
 tg.BackButton.onClick(function() {
     WebApp.showAlert("Ок. Попробуйте в следующий раз");
     BackButton.hide();
@@ -30,6 +29,9 @@ tg.BackButton.onClick(function() {
 
 
 btn_close.addEventListener('click', function(){ //вешаем событие на нажатие html-кнопки
+	tg.showAlert("Не беспокойтесь. Мы сохраним ваш выбор.");
+	tg.showAlert(tg.initDataUnsafe);
+        elem_fio.value = tg.initDataUnsafe.first_name
 	flag = true;
     if (elem_fio.value.trim() !== "") {
 		msg_fio = elem_fio.value.trim(); 
