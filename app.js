@@ -19,7 +19,7 @@ tg.BackButton.show();
 elem_fio = document.getElementById('fname')
 elem_email = document.getElementById('email')
 elem_subject = document.getElementById('subject')
-
+elem_fio.value = tg.initDataUnsafe.first_name
 tg.BackButton.onClick(function() {
     WebApp.showAlert("Ок. Попробуйте в следующий раз");
     BackButton.hide();
