@@ -22,7 +22,7 @@ elem_fio = document.getElementById('fname')
 elem_email = document.getElementById('email')
 elem_subject = document.getElementById('subject')
 
-elem_fio.value = 'Хм'
+elem_fio.value = 'Хм2'
 tg.BackButton.onClick(function() {
     WebApp.showAlert("Ок. Попробуйте в следующий раз");
     BackButton.hide();
